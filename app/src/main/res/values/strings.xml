@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dinner</string>
+    <string name="app_title">winner winner chicken dinner</string>
+    <string name="Login_username">Prisijungimo vardas</string>
+    <string name="Login_password">Slaptažodis</string>
+    <string name="login_login_btn">Prisijungti</string>
+    <string name="login_register_btn">Užsiregistruoti</string>
+</resources>
