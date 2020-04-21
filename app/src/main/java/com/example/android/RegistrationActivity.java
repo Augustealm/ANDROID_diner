@@ -9,42 +9,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-public class MainActivity extends AppCompatActivity {
-
-    //EditText Login_username, Login_password, email_address;
-    //Button btn, btn2;
+public class RegistrationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registration);
+
 
         final EditText Login_username = findViewById(R.id.Login_username);
         final EditText Login_password = findViewById(R.id.Login_password);
-        Button btn_register = findViewById(R.id.btn_register);
-        Button btn_login = findViewById(R.id.btn_login);
+        final EditText email_address = findViewById(R.id.email_address);
+        Button btn_register1 = findViewById(R.id.btn_register);
 
-        btn_register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Registracija", Toast.LENGTH_LONG).show();
-                Intent gotoRegistrationActivity = new Intent(MainActivity.this, RegistrationActivity.class);
-                startActivity(gotoRegistrationActivity);
-            }
-        });
-        btn_login.setOnClickListener(new View.OnClickListener() {
-        @Override
+        btn_register1.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
             String username = Login_username.getText().toString();
             String password = Login_password.getText().toString();
-            Toast.makeText(MainActivity.this, "Prisijungėte", Toast.LENGTH_LONG).show();
+            String email = email_address.getText().toString();
+            Toast.makeText(RegistrationActivity.this, "Užsiregistravote", Toast.LENGTH_LONG).show();
 
+            boolean emailValid = false;
             boolean usernameValid = false;
             boolean passwordValid = false;
 
             Login_username.setError(null);
             Login_password.setError(null);
+            email_address.setError(null);
 
             if (Validation.isCredentialsValid(username)){
                 usernameValid = true;
@@ -59,11 +50,20 @@ public class MainActivity extends AppCompatActivity {
                 Login_password.setError(getResources().getString(R.string.login_invalid_login_password));
                 Login_password.requestFocus();
             }
-            if(usernameValid && passwordValid) {
-                Intent gotLoginActivity = new Intent(MainActivity.this, LoginActivity.class);
+            if (Validation.isValidEmail(email)){
+                emailValid = true;
+            } else {
+                email_address.setError(getResources().getString(R.string.login_invalid_email_address));
+                email_address.requestFocus();
+            }
+
+            if(emailValid && usernameValid && passwordValid) {
+                Intent gotLoginActivity = new Intent(RegistrationActivity.this, LoginActivity.class);
                 startActivity(gotLoginActivity);
             }
         }
-        });
+    });
 
-    }}
+}}
+
+
