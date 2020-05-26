@@ -9,4 +9,34 @@
     <string name="login_invalid_login_username">Klaidingai įvestas prisijungimo vardas</string>
     <string name="login_invalid_login_password">Klaidingai įvestas slaptažodis</string>
     <string name="login_invalid_email_address">Klaidingai įvestas el.pašto adresas</string>
+    <string name="login_remember_me">Remember me</string>
+
+    <string name="search_new_entry_dinner_button">Naujas užsakymas</string>
+    <string name="new_entry_dinner_type">Pasirinkimas:</string>
+    <string name="new_entry_dinner_type_soup">Striuba</string>
+    <string name="new_entry_dinner_type_main">Pagrindiniai patiekalai</string>
+    <string name="new_entry_dinner_type_salad">Salotos</string>
+    <string name="new_entry_dinner_type_snacks">Užkandžiai</string>
+    <string name="new_entry_dinner_delivery_type">Ar reikalingas pristatymas:</string>
+    <string name="new_entry_dinner_delivery_type_no">Ne</string>
+    <string name="new_entry_dinner_delivery_type_yes">Taip</string>
+    <string name="new_entry_dinner_price">Kaina</string>
+    <string name="new_entry_dinner_payment_type">Pasirinkite mokėjimo tipą</string>
+    <string-array name="new_entry_dinner_payment_type">
+        <item>Grynais</item>
+        <item>Kortele</item>
+        <item>moQ</item>
+        <item>Dovanų kortele</item>
+    </string-array>
+    <string name="new_entry_button">Create</string>
+
+    <string name="new_entry_database_info">Prašome palaukti, įrašas siunčiamas į duomenų bazę</string>
+    <string name="register_success">Sėkmingai prisijungėte</string>
+    <string name="register_failure">Prisijungti nepavyko</string>
+
+    <string name="login_please_wait">Prašome palaukti</string>
+    <string name="login_success">Vartotojas autentifikuotas sistemoje</string>
+    <string name="login_failure">Tokio vartotojo sistemoje nėra</string>
+
+    <string name="URL_DATABASE">https://atsiskaitomojiandroid.000webhostapp.com/connect.php</string>
 </resources>
